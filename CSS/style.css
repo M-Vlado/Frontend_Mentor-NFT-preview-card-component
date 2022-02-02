@@ -1,0 +1,173 @@
+:root {
+    /* PRIMARY COLORS */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    
+    /* NEUTRAL COLORS*/
+    
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+
+
+}
+
+
+
+p {
+    color: var(--soft-blue);
+    font-size: 18px;
+}
+
+.wrapper {
+    max-width: 320px;
+    background-color: var(--very-dark-blue-card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 15px 25px 15px 10px hsl(216, 86%, 6%)
+
+}
+
+.wrapper-img {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+.img-equi {
+    width: 270px;
+}
+
+.img-overaly {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%, 60%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in;
+}
+
+.img-overaly:hover,
+.img-overaly:active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.wrapper h2 {
+    margin: 20px 0 20px 0;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.wrapper h2:hover,
+.wrapper h2:active {
+    color: var(--cyan);
+}
+
+.desc {
+    line-height: 1.6;
+}
+
+.crypto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+
+
+.etherum {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 0 20px 0;
+
+}
+
+.time-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 0 20px 0;
+
+    
+}
+
+.etherum h3 {
+    margin-left: 7px;
+    color: var(--cyan);
+}
+
+
+
+.time-left p {
+    margin-left: 5px;
+}
+
+.creator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.avatar {
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.creator p {
+    margin-left: 15px;
+}
+
+.creator span {
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+}
+
+.creator span:hover,
+.creator span:active {
+    color: var(--cyan);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 40px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width: 375px) {
+    .body {
+        width: 375px;
+    }
+}
